@@ -1,4 +1,4 @@
-package com.webs.rebelixmodding; 
+package com.github.rebelixmodding; 
 
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -13,8 +13,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.common.network.NetworkMod.SidedPacketHandler;
 import cpw.mods.fml.common.SidedProxy;
-import com.webs.rebelixmodding.proxies.CommonProxy;
-import com.webs.rebelixmodding.ClientPacketHandler;
+import com.github.rebelixmodding.proxies.CommonProxy;
+import com.github.rebelixmodding.ClientPacketHandler;
 
 //@author RebelixModdingTeam
  
@@ -27,8 +27,8 @@ public class LoneCraftMain {
 @Instance("LoneCraftInstance") 
 public static LoneCraftMain instance = new LoneCraftMain();
 
-@SidedProxy(clientSide = "com.webs.rebelixmodding.proxies.ClientProxy", serverSide = "com.webs.rebelixmodding.proxies.CommonProxy")
-public static com.webs.rebelixmodding.proxies.CommonProxy proxy;
+@SidedProxy(clientSide = "com.github.rebelixmodding.proxies.ClientProxy", serverSide = "com.github.rebelixmodding.proxies.CommonProxy")
+public static com.github.rebelixmodding.proxies.CommonProxy proxy;
 
 @Init
 public void InitCobaltCraft(FMLInitializationEvent event){

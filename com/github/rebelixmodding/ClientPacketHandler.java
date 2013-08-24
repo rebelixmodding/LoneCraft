@@ -1,4 +1,4 @@
-package com.webs.rebelixmodding;
+package com.github.rebelixmodding;
 
 
 import java.io.ByteArrayInputStream;
