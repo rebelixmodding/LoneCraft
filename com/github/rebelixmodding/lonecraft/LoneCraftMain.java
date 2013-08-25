@@ -22,6 +22,7 @@ import com.github.rebelixmodding.lonecraft.proxies.CommonProxy;
 import com.github.rebelixmodding.lonecraft.ClientPacketHandler;
 
 //@author RebelixModdingTeam
+//@iLexiconn: Hi! This is a test comment :D
  
 @NetworkMod(clientSideRequired=true,serverSideRequired=false, 
 clientPacketHandlerSpec = @SidedPacketHandler(channels = {"LoneCraft" }, packetHandler = ClientPacketHandler.class), 
