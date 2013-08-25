@@ -1,4 +1,4 @@
-package com.github.rebelixmodding.proxies;
+package com.github.rebelixmodding.lonecraft.proxies;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
@@ -9,7 +9,7 @@ import net.minecraft.world.World;
 import cpw.mods.fml.common.network.IGuiHandler;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
-import com.github.rebelixmodding.LoneCraftMain;
+import com.github.rebelixmodding.lonecraft.LoneCraftMain;
 
 public class CommonProxy implements IGuiHandler{ 
 public void registerRenderInformation() 
