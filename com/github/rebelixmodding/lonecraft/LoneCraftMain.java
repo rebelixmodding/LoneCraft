@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
 import cpw.mods.fml.common.Mod.PostInit;
@@ -22,7 +23,7 @@ import com.github.rebelixmodding.lonecraft.proxies.CommonProxy;
 import com.github.rebelixmodding.lonecraft.ClientPacketHandler;
 
 //@author RebelixModdingTeam
-//@iLexiconn: Hi! This is a test comment :D
+
  
 @NetworkMod(clientSideRequired=true,serverSideRequired=false, 
 clientPacketHandlerSpec = @SidedPacketHandler(channels = {"LoneCraft" }, packetHandler = ClientPacketHandler.class), 
@@ -36,18 +37,13 @@ public static LoneCraftMain instance = new LoneCraftMain();
 @SidedProxy(clientSide = "com.github.rebelixmodding.lonecraft.proxies.ClientProxy", serverSide = "com.github.rebelixmodding.lonecraft.proxies.CommonProxy")
 public static com.github.rebelixmodding.lonecraft.proxies.CommonProxy proxy;
 
-@PreInit
-public void preInit(FMLPreInitializationEvent event) {
+@EventHandler
+public static void init(FMLInitializationEvent event) {
 	
-}
+	}
 
-@Init
-public void init(FMLInitializationEvent event) {
-	
-}
-
-@PostInit
+@EventHandler
 public static void postInit(FMLPostInitializationEvent event) {
-	
-}
+
+	}
 }
