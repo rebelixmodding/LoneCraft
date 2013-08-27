@@ -5,6 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.Configuration;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Init;
@@ -52,8 +53,10 @@ public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 	};
 //--------------------------------------------
 @EventHandler
-public static void preInit(FMLPostInitializationEvent event) {
-
+public static void preInit(FMLPreInitializationEvent event) {
+	Configuration config = new Configuration(
+			event.getSuggestedConfigurationFile());
+			config.load();
 	}
 @EventHandler
 public static void load(FMLInitializationEvent event) {
