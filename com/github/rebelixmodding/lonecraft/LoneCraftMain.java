@@ -3,6 +3,7 @@ package com.github.rebelixmodding.lonecraft;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Init;
@@ -36,9 +37,24 @@ public static LoneCraftMain instance = new LoneCraftMain();
 
 @SidedProxy(clientSide = "com.github.rebelixmodding.lonecraft.proxies.ClientProxy", serverSide = "com.github.rebelixmodding.lonecraft.proxies.CommonProxy")
 public static com.github.rebelixmodding.lonecraft.proxies.CommonProxy proxy;
-
+//--------------------------------
+public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
+	public ItemStack getIconItemStack(){
+		return new ItemStack(Block.oreDiamond);}
+		public String getTranslatedTabLabel()
+		{
+		return "Lonecraft";
+		}
+	
+	
+};
+//--------------------------------
 @EventHandler
-public static void init(FMLInitializationEvent event) {
+public static void preInit(FMLPostInitializationEvent event) {
+
+	}
+@EventHandler
+public static void load(FMLInitializationEvent event) {
 	
 	}
 

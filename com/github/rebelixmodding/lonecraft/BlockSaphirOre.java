@@ -7,14 +7,13 @@ import net.minecraft.creativetab.CreativeTabs;
 public class BlockSaphirOre extends Block{
 	//@author mhoefling
 	//add Textures !!!
-	//make own creative tab for LoneCraft
 	public BlockSaphirOre(int par1, Material par2Material) {
 		super(par1, par2Material);
 	setHardness(1.5F);
 	setStepSound(soundStoneFootstep);
 	setResistance(10.0F);
 	setUnlocalizedName("Saphire Ore");
-	setCreativeTab(CreativeTabs.tabLonecraft);
+	setCreativeTab(LoneCraftMain.tabLoneCraft);
 	}
 
 }
