@@ -27,22 +27,22 @@ import com.github.rebelixmodding.lonecraft.ClientPacketHandler;
 
 //@author RebelixModdingTeam
 
- 
+//----------------------------------------------------------------------------------------
 @NetworkMod(clientSideRequired=true,serverSideRequired=false, 
 clientPacketHandlerSpec = @SidedPacketHandler(channels = {"LoneCraft" }, packetHandler = ClientPacketHandler.class), 
 serverPacketHandlerSpec = @SidedPacketHandler(channels = {}, packetHandler = ServerPacketHandler.class)) 
 @Mod(modid="lonecraft",name="LoneCraft",version="1.0") 
 public class LoneCraftMain { 
-
+//----------------------------------------------------------------------------------------
 @Instance("LoneCraftInstance") 
 public static LoneCraftMain instance = new LoneCraftMain();
-
+//----------------------------------------------------------------------------------------
 @SidedProxy(clientSide = "com.github.rebelixmodding.lonecraft.proxies.ClientProxy", serverSide = "com.github.rebelixmodding.lonecraft.proxies.CommonProxy")
 public static com.github.rebelixmodding.lonecraft.proxies.CommonProxy proxy;
-//--------------------------------------------
+//----------------------------------------------------------------------------------------
 public static Block BlockSaphirOre;
 public static int idBlockSaphirOre = 193;
-//--------------------------------------------
+//----------------------------------------------------------------------------------------
 public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 	public ItemStack getIconItemStack(){
 		return new ItemStack(Block.oreDiamond);}
@@ -51,18 +51,19 @@ public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 		return "LoneCraft";
 		}
 	};
-//--------------------------------------------
+//----------------------------------------------------------------------------------------
 @EventHandler
 public static void preInit(FMLPreInitializationEvent event) {
 	Configuration config = new Configuration(
 			event.getSuggestedConfigurationFile());
 			config.load();
 	}
+//----------------------------------------------------------------------------------------
 @EventHandler
 public static void load(FMLInitializationEvent event) {
 
 }
-
+//----------------------------------------------------------------------------------------
 @EventHandler
 public static void postInit(FMLPostInitializationEvent event) {
 
