@@ -14,7 +14,7 @@ public class BlockSaphirOre extends Block{
 	setStepSound(soundStoneFootstep);
 	setResistance(10.0F);
 	setUnlocalizedName("Saphire Ore");
-	setCreativeTab(CreativeTabs.tabBlock);
+	setCreativeTab(CreativeTabs.tabLonecraft);
 	}
 
 }
