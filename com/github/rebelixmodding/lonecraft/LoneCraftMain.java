@@ -1,6 +1,7 @@
 package com.github.rebelixmodding.lonecraft; 
 
 import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -29,7 +30,7 @@ import com.github.rebelixmodding.lonecraft.ClientPacketHandler;
 @NetworkMod(clientSideRequired=true,serverSideRequired=false, 
 clientPacketHandlerSpec = @SidedPacketHandler(channels = {"LoneCraft" }, packetHandler = ClientPacketHandler.class), 
 serverPacketHandlerSpec = @SidedPacketHandler(channels = {}, packetHandler = ServerPacketHandler.class)) 
-@Mod(modid="LoneCraft",name="LoneCraft",version="1.0") 
+@Mod(modid="lonecraft",name="LoneCraft",version="1.0") 
 public class LoneCraftMain { 
 
 @Instance("LoneCraftInstance") 
@@ -37,26 +38,27 @@ public static LoneCraftMain instance = new LoneCraftMain();
 
 @SidedProxy(clientSide = "com.github.rebelixmodding.lonecraft.proxies.ClientProxy", serverSide = "com.github.rebelixmodding.lonecraft.proxies.CommonProxy")
 public static com.github.rebelixmodding.lonecraft.proxies.CommonProxy proxy;
-//--------------------------------
+//--------------------------------------------
+public static Block BlockSaphirOre;
+public static int idBlockSaphirOre = 193;
+//--------------------------------------------
 public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 	public ItemStack getIconItemStack(){
 		return new ItemStack(Block.oreDiamond);}
 		public String getTranslatedTabLabel()
 		{
-		return "Lonecraft";
+		return "LoneCraft";
 		}
-	
-	
-};
-//--------------------------------
+	};
+//--------------------------------------------
 @EventHandler
 public static void preInit(FMLPostInitializationEvent event) {
 
 	}
 @EventHandler
 public static void load(FMLInitializationEvent event) {
-	
-	}
+
+}
 
 @EventHandler
 public static void postInit(FMLPostInitializationEvent event) {
