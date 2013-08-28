@@ -8,8 +8,10 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockSaphirOre extends Block{
-	//@author mhoefling
-	//add textures to mcp/src/assets/lonecraft/blocks/blockSaphirOre
+	/*@author mhoefling
+	*add textures to mcp/src/assets/lonecraft/blocks/blockSaphirOre
+	*How often and where should it spawn ?
+	*/
 	
 	public BlockSaphirOre(int id, Material material) {
 		super(id, material);
