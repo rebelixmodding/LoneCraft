@@ -9,7 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 
 public class BlockSaphirOre extends Block{
 	//@author mhoefling
-	//add textures
+	//add textures to mcp/src/assets/lonecraft/blocks/blockSaphirOre
 	
 	public BlockSaphirOre(int id, Material material) {
 		super(id, material);
@@ -19,5 +19,9 @@ public class BlockSaphirOre extends Block{
 	setUnlocalizedName("blockSaphireOre");
 	setCreativeTab(LoneCraftMain.tabLoneCraft);
 	}
-	
+	@Override
+	public void registerIcons(IconRegister reg){
+		this.blockIcon = reg.registerIcon("lonecraft:blockSaphirOre");
+		
+	}
 }

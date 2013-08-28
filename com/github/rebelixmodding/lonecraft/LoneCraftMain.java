@@ -6,6 +6,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.Configuration;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Init;
@@ -33,35 +34,35 @@ clientPacketHandlerSpec = @SidedPacketHandler(channels = {"LoneCraft" }, packetH
 serverPacketHandlerSpec = @SidedPacketHandler(channels = {}, packetHandler = ServerPacketHandler.class)) 
 @Mod(modid="lonecraft",name="LoneCraft",version="1.0") 
 public class LoneCraftMain { 
-//----------------------------------------------------------------------------------------
 @Instance("LoneCraftInstance") 
 public static LoneCraftMain instance = new LoneCraftMain();
-//----------------------------------------------------------------------------------------
 @SidedProxy(clientSide = "com.github.rebelixmodding.lonecraft.proxies.ClientProxy", serverSide = "com.github.rebelixmodding.lonecraft.proxies.CommonProxy")
 public static com.github.rebelixmodding.lonecraft.proxies.CommonProxy proxy;
-//----------------------------------------------------------------------------------------
+// Saphir Ore
 public static Block BlockSaphirOre;
 public static int idBlockSaphirOre = 193;
-//----------------------------------------------------------------------------------------
+// CreativeTab LoneCraft
 public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 	public ItemStack getIconItemStack(){
-		return new ItemStack(Block.oreDiamond);}
+		return new ItemStack(BlockSaphirOre);}
 		public String getTranslatedTabLabel()
 		{
 		return "LoneCraft";
 		}
 	};
-//----------------------------------------------------------------------------------------
 @EventHandler
 public static void preInit(FMLPreInitializationEvent event) {
 	Configuration config = new Configuration(
 			event.getSuggestedConfigurationFile());
 			config.load();
 	}
-//----------------------------------------------------------------------------------------
 @EventHandler
 public static void load(FMLInitializationEvent event) {
-
+	//Saphir Ore
+	BlockSaphirOre = new BlockSaphirOre(idBlockSaphirOre, Material.rock);
+	MinecraftForge.setBlockHarvestLevel(BlockSaphirOre, "pickaxe", 2);
+	LanguageRegistry.addName(BlockSaphirOre, "Saphir Ore");
+	GameRegistry.registerBlock(BlockSaphirOre, "Saphir Ore");
 }
 //----------------------------------------------------------------------------------------
 @EventHandler
