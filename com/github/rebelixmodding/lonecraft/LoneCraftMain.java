@@ -5,6 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 import net.minecraftforge.common.Configuration;
 import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.Mod;
@@ -40,7 +41,10 @@ public static LoneCraftMain instance = new LoneCraftMain();
 public static com.github.rebelixmodding.lonecraft.proxies.CommonProxy proxy;
 // Saphir Ore
 public static Block BlockSaphirOre;
-public static int idBlockSaphirOre = 193;
+public static int idBlockSaphirOre = 4001;
+//Saphir
+public static Item ItemSaphir;
+public static int idItemSaphir = 5001;
 // CreativeTab LoneCraft
 public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 	public ItemStack getIconItemStack(){
@@ -52,9 +56,10 @@ public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 	};
 @EventHandler
 public static void preInit(FMLPreInitializationEvent event) {
-	Configuration config = new Configuration(
-			event.getSuggestedConfigurationFile());
-			config.load();
+	/*Configuration config = new Configuration(
+	 *		event.getSuggestedConfigurationFile());
+	 *		config.load();
+	 */
 	}
 @EventHandler
 public static void load(FMLInitializationEvent event) {
@@ -63,8 +68,13 @@ public static void load(FMLInitializationEvent event) {
 	MinecraftForge.setBlockHarvestLevel(BlockSaphirOre, "pickaxe", 2);
 	LanguageRegistry.addName(BlockSaphirOre, "Saphir Ore");
 	GameRegistry.registerBlock(BlockSaphirOre, "Saphir Ore");
+	//Saphir
+	ItemSaphir = new ItemSaphir(idItemSaphir);
+	LanguageRegistry.addName(ItemSaphir, "Saphir");
+	GameRegistry.registerItem(ItemSaphir, "itemSaphir", "lonecraft");
 }
 //----------------------------------------------------------------------------------------
+
 @EventHandler
 public static void postInit(FMLPostInitializationEvent event) {
 
