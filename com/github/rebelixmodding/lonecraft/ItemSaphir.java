@@ -11,6 +11,8 @@ public class ItemSaphir extends Item{
 		this.setCreativeTab(LoneCraftMain.tabLoneCraft);
 		this.setUnlocalizedName("itemSaphir");
 		this.setMaxStackSize(64);
+		this.canItemEditBlocks();
+		
 		
 	}
 	@Override

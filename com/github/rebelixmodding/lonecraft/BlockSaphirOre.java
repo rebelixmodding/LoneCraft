@@ -36,6 +36,6 @@ public class BlockSaphirOre extends Block{
 	}
 	public int quantityDropped(Random par1Random)
     {
-            return 1 + par1Random.nextInt(2);
+		return 2+par1Random.nextInt(3);
     }
 }
