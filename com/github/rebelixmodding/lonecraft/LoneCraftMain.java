@@ -59,7 +59,7 @@ public static void preInit(FMLPreInitializationEvent event) {
 	Configuration config = new Configuration(
 	 event.getSuggestedConfigurationFile());
 	 		config.load();
-	 //config just was disbaled because an error with the dropping of saphir @ saphir ore
+	 //config just was disabled because an error with the dropping of saphir @ saphir ore
 	 
 	}
 @EventHandler
