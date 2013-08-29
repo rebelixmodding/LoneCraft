@@ -59,6 +59,7 @@ public static void preInit(FMLPreInitializationEvent event) {
 	/*Configuration config = new Configuration(
 	 *		event.getSuggestedConfigurationFile());
 	 *		config.load();
+	 * why aren't we using config files? is it due to it wont work well with github? :S (this is also a test to test github)
 	 */
 	}
 @EventHandler
