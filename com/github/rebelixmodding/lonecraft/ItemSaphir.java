@@ -4,7 +4,7 @@ import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
 public class ItemSaphir extends Item{
-
+	//@author mhoefling
 	
 	public ItemSaphir(int id) {
 		super(id);
