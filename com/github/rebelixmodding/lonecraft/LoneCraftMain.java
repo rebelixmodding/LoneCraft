@@ -73,6 +73,8 @@ public static void load(FMLInitializationEvent event) {
 	ItemSaphir = new ItemSaphir(idItemSaphir);
 	LanguageRegistry.addName(ItemSaphir, "Saphir");
 	GameRegistry.registerItem(ItemSaphir, "itemSaphir", "lonecraft");
+	//OreGenerator
+	GameRegistry.registerWorldGenerator(new OreGenerator());
 }
 //----------------------------------------------------------------------------------------
 
