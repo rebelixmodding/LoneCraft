@@ -39,16 +39,16 @@ public class LoneCraftMain {
 public static LoneCraftMain instance = new LoneCraftMain();
 @SidedProxy(clientSide = "com.github.rebelixmodding.lonecraft.proxies.ClientProxy", serverSide = "com.github.rebelixmodding.lonecraft.proxies.CommonProxy")
 public static com.github.rebelixmodding.lonecraft.proxies.CommonProxy proxy;
-// Saphir Ore
-public static Block BlockSaphirOre;
-public static int idBlockSaphirOre = 4001;
-//Saphir
-public static Item ItemSaphir;
-public static int idItemSaphir = 5001;
+// Sapphir Ore
+public static Block BlockSapphirOre;
+public static int idBlockSapphirOre = 4001;
+//Sapphir
+public static Item ItemSapphir;
+public static int idItemSapphir = 5001;
 // CreativeTab LoneCraft
 public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 	public ItemStack getIconItemStack(){
-		return new ItemStack(BlockSaphirOre);}
+		return new ItemStack(BlockSapphirOre);}
 		public String getTranslatedTabLabel()
 		{
 		return "LoneCraft";
@@ -65,14 +65,14 @@ public static void preInit(FMLPreInitializationEvent event) {
 @EventHandler
 public static void load(FMLInitializationEvent event) {
 	//Saphir Ore
-	BlockSaphirOre = new BlockSaphirOre(idBlockSaphirOre, Material.rock);
-	MinecraftForge.setBlockHarvestLevel(BlockSaphirOre, "pickaxe", 2);
-	LanguageRegistry.addName(BlockSaphirOre, "Saphir Ore");
-	GameRegistry.registerBlock(BlockSaphirOre, "Saphir Ore");
+	BlockSapphirOre = new BlockSapphirOre(idBlockSapphirOre, Material.rock);
+	MinecraftForge.setBlockHarvestLevel(BlockSapphirOre, "pickaxe", 2);
+	LanguageRegistry.addName(BlockSapphirOre, "Saphir Ore");
+	GameRegistry.registerBlock(BlockSapphirOre, "Saphir Ore");
 	//Saphir
-	ItemSaphir = new ItemSaphir(idItemSaphir);
-	LanguageRegistry.addName(ItemSaphir, "Saphir");
-	GameRegistry.registerItem(ItemSaphir, "itemSaphir", "lonecraft");
+	ItemSapphir = new ItemSapphir(idItemSapphir);
+	LanguageRegistry.addName(ItemSapphir, "Sapphir");
+	GameRegistry.registerItem(ItemSapphir, "itemSapphir", "lonecraft");
 	//OreGenerator
 	GameRegistry.registerWorldGenerator(new OreGenerator());
 }

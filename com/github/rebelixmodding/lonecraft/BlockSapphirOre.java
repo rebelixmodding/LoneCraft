@@ -13,26 +13,26 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class BlockSaphirOre extends Block{
+public class BlockSapphirOre extends Block{
 	/*@author mhoefling
 	*add textures to mcp/src/minecraft/assets/lonecraft/blocks/blockSaphirOre
 	*How often and where should it spawn ?
 	*/
 	
-	public BlockSaphirOre(int id, Material material) {
+	public BlockSapphirOre(int id, Material material) {
 		super(id, material);
 	setHardness(1.5F);
 	setStepSound(soundStoneFootstep);
-	setUnlocalizedName("blockSaphireOre");
+	setUnlocalizedName("blockSapphireOre");
 	setCreativeTab(LoneCraftMain.tabLoneCraft);
 	}
 	@Override
 	public void registerIcons(IconRegister reg){
-		this.blockIcon = reg.registerIcon("lonecraft:blockSaphirOre");
+		this.blockIcon = reg.registerIcon("lonecraft:blockSapphirOre");
 		
 	}
 	public int idDropped(int metadata,Random random, int fortune){
-		return LoneCraftMain.ItemSaphir.itemID;
+		return LoneCraftMain.ItemSapphir.itemID;
 	}
 	public int quantityDropped(Random par1Random)
     {

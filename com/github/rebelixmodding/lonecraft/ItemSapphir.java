@@ -3,13 +3,13 @@ package com.github.rebelixmodding.lonecraft;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
-public class ItemSaphir extends Item{
+public class ItemSapphir extends Item{
 	//@author mhoefling
 	
-	public ItemSaphir(int id) {
+	public ItemSapphir(int id) {
 		super(id);
 		this.setCreativeTab(LoneCraftMain.tabLoneCraft);
-		this.setUnlocalizedName("itemSaphir");
+		this.setUnlocalizedName("itemSapphir");
 		this.setMaxStackSize(64);
 		this.canItemEditBlocks();
 		
@@ -17,7 +17,7 @@ public class ItemSaphir extends Item{
 	}
 	@Override
 	public void registerIcons(IconRegister reg){
-		this.itemIcon = reg.registerIcon("lonecraft:itemSaphir");
+		this.itemIcon = reg.registerIcon("lonecraft:itemSapphir");
 		
 	}
 	
