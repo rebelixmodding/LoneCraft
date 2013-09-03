@@ -1,7 +1,9 @@
-package com.github.rebelixmodding.lonecraft;
+package com.github.rebelixmodding.lonecraft.blocks;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import com.github.rebelixmodding.lonecraft.LoneCraftMain;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

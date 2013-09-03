@@ -24,6 +24,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.common.network.NetworkMod.SidedPacketHandler;
 import cpw.mods.fml.common.SidedProxy;
 
+import com.github.rebelixmodding.lonecraft.blocks.BlockSapphirOre;
+import com.github.rebelixmodding.lonecraft.item.ItemSapphir;
 import com.github.rebelixmodding.lonecraft.proxies.CommonProxy;
 import com.github.rebelixmodding.lonecraft.ClientPacketHandler;
 
@@ -39,13 +41,23 @@ public class LoneCraftMain {
 public static LoneCraftMain instance = new LoneCraftMain();
 @SidedProxy(clientSide = "com.github.rebelixmodding.lonecraft.proxies.ClientProxy", serverSide = "com.github.rebelixmodding.lonecraft.proxies.CommonProxy")
 public static com.github.rebelixmodding.lonecraft.proxies.CommonProxy proxy;
+//----------------------------------------------------------------------------------------
+
 // Sapphir Ore
+
 public static Block BlockSapphirOre;
-public static int idBlockSapphirOre = 4001;
+public static int idBlockSapphirOre;
+
 //Sapphir
 public static Item ItemSapphir;
-public static int idItemSapphir = 5001;
+public static int idItemSapphir;
+
+
+
 // CreativeTab LoneCraft
+/**
+ * Creates the creative tab "lonecraft".
+ */
 public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 	public ItemStack getIconItemStack(){
 		return new ItemStack(BlockSapphirOre);}
@@ -54,15 +66,22 @@ public static CreativeTabs tabLoneCraft = new CreativeTabs("tabLoneCraft"){
 		return "LoneCraft";
 		}
 	};
-@EventHandler
+
+	
+	@EventHandler
 public static void preInit(FMLPreInitializationEvent event) {
+	//Config
 	Configuration config = new Configuration(
 	 event.getSuggestedConfigurationFile());
 	 		config.load();
-	 //config just was disabled because an error with the dropping of saphir @ saphir ore
-	 
+	idItemSapphir = config.getItem("idItemSapphir", 5001).getInt();
+	idBlockSapphirOre = config.getBlock("idBlockSapphirOre", 4001).getInt();
+	 		
+	 		config.save();
 	}
-@EventHandler
+
+	
+	@EventHandler
 public static void load(FMLInitializationEvent event) {
 	//Saphir Ore
 	BlockSapphirOre = new BlockSapphirOre(idBlockSapphirOre, Material.rock);
@@ -78,7 +97,9 @@ public static void load(FMLInitializationEvent event) {
 }
 //----------------------------------------------------------------------------------------
 
-@EventHandler
+
+	
+	@EventHandler
 public static void postInit(FMLPostInitializationEvent event) {
 
 	}
