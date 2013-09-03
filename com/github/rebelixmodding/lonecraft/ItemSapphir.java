@@ -15,6 +15,9 @@ public class ItemSapphir extends Item{
 		
 		
 	}
+	/**
+	 * Sets the texture to itemSapphir.png
+	 */
 	@Override
 	public void registerIcons(IconRegister reg){
 		this.itemIcon = reg.registerIcon("lonecraft:itemSapphir");
