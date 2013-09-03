@@ -17,8 +17,12 @@ import net.minecraft.world.World;
 
 public class BlockSapphirOre extends Block{
 	/*@author mhoefling
-	*add textures to mcp/src/minecraft/assets/lonecraft/blocks/blockSaphirOre
 	*How often and where should it spawn ?
+	*/
+	
+	/*@author Redstonize (project lead)
+	*Somebody should set rarity to same levels than emerald. 
+	*Should also be generated in any biome under layer 30.
 	*/
 	
 	public BlockSapphirOre(int id, Material material) {
