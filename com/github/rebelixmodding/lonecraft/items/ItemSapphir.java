@@ -1,4 +1,4 @@
-package com.github.rebelixmodding.lonecraft.item;
+package com.github.rebelixmodding.lonecraft.items;
 
 import com.github.rebelixmodding.lonecraft.LoneCraftMain;
 
