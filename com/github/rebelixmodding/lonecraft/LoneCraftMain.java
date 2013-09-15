@@ -31,6 +31,7 @@ import com.github.rebelixmodding.lonecraft.*;
 
 //----------------------------------------------------------------------------------------
 @NetworkMod(clientSideRequired=true,serverSideRequired=false, 
+//What is this?? Packethandler?
 clientPacketHandlerSpec = @SidedPacketHandler(channels = {"LoneCraft" }, packetHandler = ClientPacketHandler.class), 
 serverPacketHandlerSpec = @SidedPacketHandler(channels = {}, packetHandler = ServerPacketHandler.class)) 
 @Mod(modid="lonecraft",name="LoneCraft",version="1.0") 
