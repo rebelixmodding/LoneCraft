@@ -25,6 +25,10 @@ public class BlockSapphirOre extends Block{
 	*Should also be generated in any biome under layer 30.
 	*/
 	
+	/*@author iLexiconn
+	 * Do that in the oregeneration file, not here
+	 * /
+	
 	public BlockSapphirOre(int id, Material material) {
 		super(id, material);
 	setHardness(1.5F);
