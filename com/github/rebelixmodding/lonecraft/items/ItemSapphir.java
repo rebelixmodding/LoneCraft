@@ -1,7 +1,7 @@
 package com.github.rebelixmodding.lonecraft.items;
 
 import com.github.rebelixmodding.lonecraft.LoneCraftMain;
-
+import net.minecraft.item.*;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.item.Item;
 
